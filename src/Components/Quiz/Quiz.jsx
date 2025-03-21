@@ -18,6 +18,7 @@ const Quiz = () => {
     if (!lock) {
       if (answered) {
         e.target.classList.add("correct");
+        setScore(score=>score+1)
       } else {
         e.target.classList.add("wrong");
         const correctOption = e.target.parentElement.querySelectorAll(`.item-${correctans}`)
